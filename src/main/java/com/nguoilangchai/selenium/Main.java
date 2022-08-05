@@ -1,12 +1,11 @@
 package com.nguoilangchai.selenium;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
 
 public class Main {
 
@@ -45,23 +44,16 @@ public class Main {
         // trình duyệt sẵn sàng thông qua người em đưa hết data(trang web trong ram)
         // cho mình dưới dạng cây DOM = Document Object Model
         // trang HTML trả về trong RAM của trình duyệt được xem là 1 cây các object
-        // node/tag được xem là 1 object thuộc nhóm WebElement
-        // 
-//        myBrowser.get("https://youtube.com");
+        // node/tag được xem là 1 object thuộc nhóm WebElement 
+
         myBrowser.get("http://localhost:8080/Project_banhang/home");
         myBrowser.manage().window().maximize();
 
-//        WebElement searchBox = myBrowser.findElement(By.name("search_query"));
-//        searchBox.sendKeys("Sơn Tùng");
-//        
-//        searchBox.submit(); 
-//        
-//        WebElement searchBox = myBrowser.findElement(By.name("search_query"));
-        //body/div[@id='screen-root']/div[1]/div[1]/div[2]/div[2]/div[2]
+        Thread.sleep(2000);
         WebElement searchBox = myBrowser.findElement(By.xpath("//a[contains(text(),'Login')]"));
         searchBox.click();
+        
         Thread.sleep(1000);
-
         WebElement searchUserName = myBrowser.findElement(By.name("user"));
         searchUserName.sendKeys("nam");
         Thread.sleep(1000);
@@ -74,14 +66,6 @@ public class Main {
         btnLogin.click();
         Thread.sleep(1000);
 
-//        WebElement btnProfile = myBrowser.findElement(By.xpath("//body/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]"));
-//        btnProfile.click();
-//        Thread.sleep(1000);
-//        
-//        myBrowser.findElement(By.xpath("body/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/button[1]")).click();
-//        Thread.sleep(1000);
-//        
-//        myBrowser.findElement(By.xpath("//body/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/button[1]")).click();
         Thread.sleep(1000);
 
         myBrowser.findElement(By.xpath("//a[contains(text(),'Hello nam')]")).click();
