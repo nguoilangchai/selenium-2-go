@@ -1,6 +1,4 @@
-#Làm quen với Selenium:
-*Sử dụng selenium để test Use Case Edit Profile
-*...
+#Làm quen với Selenium: sử dụng selenium để test use case Edit Profile.
 
 ### Video:
 ![File GIF](https://github.com/nguoilangchai/selenium-2-go/blob/main/videoDemoEditProfileBySelenium.gif)
